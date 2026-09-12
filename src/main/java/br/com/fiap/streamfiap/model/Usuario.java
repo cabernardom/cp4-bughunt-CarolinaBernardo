@@ -34,7 +34,7 @@ public class Usuario {
         this.creditos = this.creditos - valor;
     }
 
-    public Usuario alugar(Conteudo conteudo) throws ClassificacaoIndicativaException {
+    public Usuario alugar(Conteudo conteudo) {
         if (!conteudo.isDisponivel()) {
             throw new ConteudoIndisponivelException("Conteúdo indisponível para aluguel: " + conteudo.getTitulo());
         }
