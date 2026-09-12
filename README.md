@@ -2,12 +2,10 @@
 
 ## Identificacao
 
-**Grupo:** CP4-YGOR
+**Grupo:** CarolinaBernardo
 
 | Integrante | RM | Turma |
-| A preencher pelo grupo | | |
-| | | |
-| | | |
+| Carolina Bernardo | 564651 | 2CCPW |
 
 | Campo | Resultado |
 |---|---|
