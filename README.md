@@ -5,6 +5,7 @@
 **Grupo:** CarolinaBernardo
 
 | Integrante | RM | Turma |
+|---|---|---|
 | Carolina Bernardo | 564651 | 2CCPW |
 
 | Campo | Resultado |
@@ -41,61 +42,6 @@
 | clean06 | `throws ClassificacaoIndicativaException` apos a excecao virar unchecked. | Assinatura redundante e ruido na API. | Remocao da declaracao e do import sem uso. |
 
 ## Parte 3 - Perguntas de reflexao
-
-# Checkpoint 4 — Bug Hunt StreamFIAP
-
-> Copie este arquivo para a raiz do seu repositório com o nome **README.md**
-> e preencha todas as seções.
-
-## Identificação
-
-**Grupo:** CarolinaBernardo
-
-| Integrante | RM | Turma |
-|---|---|---|
-| Carolina Bernardo | 564651 | 2CCPW |
-
-| Campo | |
-|---|---|
-| **Total de bugs corrigidos** | ___ / 12 |
-| **Total de ajustes de Clean Code** | ___ / 6 |
-
----
-
-## Parte 1 — Bugs encontrados
-
-> Uma linha por bug, na ordem em que você os encontrou. Use a numeração dos seus
-> commits (`fix: bug01 ...`). Preencha TODAS as colunas — metade da nota está aqui.
-
-| # | Sintoma observado (o que fiz/vi) | Causa raiz (arquivo e linha aproximada) | Correção aplicada | Conceito da disciplina |
-|---|---|---|---|---|
-| bug01 | | | | |
-| bug02 | | | | |
-| bug03 | | | | |
-| bug04 | | | | |
-| bug05 | | | | |
-| bug06 | | | | |
-| bug07 | | | | |
-| bug08 | | | | |
-| bug09 | | | | |
-| bug10 | | | | |
-| bug11 | | | | |
-| bug12 | | | | |
-
-## Parte 2 — Ajustes de Clean Code
-
-| # | Onde estava | Qual princípio/boas práticas era violado | O que eu mudei |
-|---|---|---|---|
-| clean01 | | | |
-| clean02 | | | |
-| clean03 | | | |
-| clean04 | | | |
-| clean05 | | | |
-| clean06 | | | |
-
----
-
-## Parte 3 — Perguntas de reflexão
 
 > Responda com suas palavras, 5 a 10 linhas cada, **usando o código real do projeto
 > como exemplo**. Respostas genéricas de tutorial não pontuam.
@@ -144,31 +90,6 @@ O construtor parametrizado deve garantir que um objeto criado diretamente ja nas
 ### 6. Abstracao e interface (Aulas 8 e 9)
 
 `Conteudo` e abstrata porque concentra identidade, dados comuns e o comportamento base de qualquer item alugavel. `Promocionavel` e uma interface porque representa uma capacidade opcional: filme e serie aplicam desconto, mas documentario nao participa da promocao. Se documentario passasse a ter promocao, ele implementaria `Promocionavel` e criaria `aplicarPromocao`; o metodo `calcularPrecoPromocional` de `Conteudo` ja detecta essa capacidade. As classes `Filme`, `Serie`, `Usuario` e os controllers ficariam intactos. Isso mostra que a interface reduz acoplamento e permite adicionar comportamento sem alterar o fluxo geral.
-
-## Parte 4 - Historico de commits
-
-Cada correcao foi registrada em commit separado, preservando o commit inicial do projeto:
-
-```text
-fix: bug01 corrigir preco e construtor de serie
-fix: bug02 aplicar desconto correto em filmes
-fix: bug03 tornar documentario gratuito
-fix: bug04 corrigir cadastro e saldo do usuario
-fix: bug05 rejeitar conteudo indisponivel
-fix: bug06 retornar erro para conteudo inexistente
-fix: bug07 buscar conteudos por categoria
-fix: bug08 expor erro de classificacao na api
-fix: bug09 validar duracao do conteudo
-fix: bug10 impedir creditos negativos
-fix: bug11 responder usuario inexistente
-fix: bug12 retornar erro para entrada invalida
-refactor: clean01 usar injecao por construtor
-refactor: clean02 remover codigo morto
-refactor: clean03 nomear constantes de preco
-refactor: clean04 melhorar nomes do aluguel
-refactor: clean05 remover api deprecated
-refactor: clean06 remover checked redundante
-```
 
 ## Execucao
 
