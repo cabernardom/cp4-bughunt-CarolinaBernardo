@@ -22,7 +22,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(CreditosInsuficientesException.class)
     public ResponseEntity<Map<String, String>> handleCreditosInsuficientes(CreditosInsuficientesException e) {
-        return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body(Map.of("erro", e.getMessage()));
+        return ResponseEntity.status(HttpStatus.valueOf(422)).body(Map.of("erro", e.getMessage()));
     }
 
     @ExceptionHandler(ConteudoIndisponivelException.class)
