@@ -3,7 +3,6 @@ package br.com.fiap.streamfiap.controller;
 import br.com.fiap.streamfiap.exception.UsuarioNaoEncontradoException;
 import br.com.fiap.streamfiap.model.Usuario;
 import br.com.fiap.streamfiap.repository.UsuarioRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,8 +10,11 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/usuarios")
 public class UsuarioController {
 
-    @Autowired
-    private UsuarioRepository usuarioRepository;
+    private final UsuarioRepository usuarioRepository;
+
+    public UsuarioController(UsuarioRepository usuarioRepository) {
+        this.usuarioRepository = usuarioRepository;
+    }
 
     // POST /api/usuarios - Cadastrar usuário (cria nova instância sem o id vindo do cliente)
     @PostMapping
