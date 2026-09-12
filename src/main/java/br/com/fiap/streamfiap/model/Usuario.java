@@ -22,7 +22,7 @@ public class Usuario {
     public Usuario(String nome, int idade, double creditos) {
         this.nome = nome;
         this.idade = idade;
-        this.creditos = creditos;
+        setCreditos(creditos);
     }
 
     public boolean temCreditosSuficientes(double preco) {
@@ -77,5 +77,10 @@ public class Usuario {
     public void setIdade(int idade) { this.idade = idade; }
 
     public double getCreditos() { return creditos; }
-    public void setCreditos(double creditos) { this.creditos = creditos; }
+    public void setCreditos(double creditos) {
+        if (creditos < 0) {
+            throw new IllegalArgumentException("Os créditos não podem ser negativos");
+        }
+        this.creditos = creditos;
+    }
 }
