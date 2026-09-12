@@ -19,13 +19,13 @@ public class Usuario {
     }
 
     public Usuario(String nome, int idade, double creditos) {
-        nome = nome;
+        this.nome = nome;
         this.idade = idade;
         this.creditos = creditos;
     }
 
     public boolean temCreditosSuficientes(double preco) {
-        return preco >= this.creditos;
+        return this.creditos >= preco;
     }
 
     public void debitarCreditos(double valor) {
